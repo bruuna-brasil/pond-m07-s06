@@ -13,7 +13,7 @@ O problema abordado nesta proposta é a necessidade de reforçar a segurança de
 ### Arquitetura Anterior
 Na arquitetura original, todos os serviços estavam expostos diretamente à internet, e não havia segregação entre componentes públicos e privados. Isso tornava o sistema vulnerável a uma série de ataques e violações de segurança. Além disso, faltavam mecanismos robustos de auditoria e monitoramento, o que dificultava a identificação de acessos indevidos ou comportamentos anômalos. A imagem abaixo ilustra essa arquitetura:
 
-![**Diagrama de Arquitetura**](arquitetura-anterior.png)
+![**Diagrama de Arquitetura**](arquitetura_antiga.png)
 
 **Principais Características da Arquitetura Anterior:**
 - **Serviços expostos à internet**: Todos os serviços (como STT Service, PLN Service, Scraping Service e Tag Service) eram acessíveis diretamente da internet, aumentando o risco de ataques.
@@ -39,7 +39,7 @@ A nova arquitetura introduz várias melhorias de segurança e controle, com o us
 
 A proposta de solução inclui a reorganização da arquitetura do sistema em uma VPC (Virtual Private Cloud) dividida em duas sub-redes: pública e privada, de forma a isolar os serviços que não precisam de acesso à internet. A seguir, apresento o diagrama da nova arquitetura:
 
-![**Diagrama de Arquitetura Atualizado**](arquitetura-atualizada.png)
+![**Diagrama de Arquitetura Atualizado**](arquitetura_atualizada.png)
 
 ### Descrição dos Módulos:
 
@@ -63,4 +63,3 @@ A implementação desta nova arquitetura trará um nível significativo de segur
 AMAZON. **AWS CloudTrail Documentation**. Disponível em: https://docs.aws.amazon.com/cloudtrail/. Acesso em: 15 set. 2024.
 
 SHACKLEFORD, D. **Security in the Cloud: Best Practices for Securing AWS Workloads**. Tech Publishing, 2021.
-```
